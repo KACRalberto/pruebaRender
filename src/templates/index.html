@@ -1,0 +1,29 @@
+{% extends "./layout.html" %}
+
+{% block title %}
+    {{data.titulo}}
+{% endblock %}
+
+{% block body %}
+
+
+    <h1> Paco template new paco 10:47</h1>
+    <img src="https://userscontent2.emaze.com/images/bfebd05c-af2f-456d-abda-629063933bd2/6900bb2e-248a-4fa2-a94c-77b9dc3d93d0.jpg">
+    <h3>Aqui los datos que recibo may friend: <br>
+        <span>{{ data.titulo }}</span> <br>
+        <span>{{ data.saludo }}</span>
+    </h3>
+    <div>
+        {% if data.n_cursos > 0 %}
+        <ul>
+            {% for c in data.cursos %}
+            <li>{{ c }} - {{ loop.index0 }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <h2> No content </h2>
+        {% endif %}
+    </div>
+     
+
+{% endblock %}
